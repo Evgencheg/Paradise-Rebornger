@@ -6,6 +6,7 @@ using System.Text.Json;
 using Content.Server.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using NpgsqlTypes;
@@ -15,9 +16,11 @@ using NpgsqlTypes;
 namespace Content.Server.Database.Migrations.Postgres
 {
     [DbContext(typeof(PostgresServerDbContext))]
-    partial class PostgresServerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260120200503_BanRefactor")]
+    partial class BanRefactor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1016,11 +1019,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text[]")
                         .HasColumnName("construction_favorites");
 
-                    b.Property<string>("GhostId")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("ghost_id");
-
                     b.Property<int>("SelectedCharacterSlot")
                         .HasColumnType("integer")
                         .HasColumnName("selected_character_slot");
@@ -1055,11 +1053,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("char_name");
-
-                    b.Property<string>("ErpStatus")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("erp_status");
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
@@ -1130,11 +1123,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("species");
-
-                    b.Property<string>("Voice")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("voice");
 
                     b.HasKey("Id")
                         .HasName("PK_profile");
@@ -1399,45 +1387,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsUnique();
 
                     b.ToTable("unban", (string)null);
-
-                    modelBuilder.Entity("Content.Server.Database.Sponsor", b =>
-                    {
-                        b.Property<Guid>("UserId")
-                            .ValueGeneratedOnAdd()
-                            .HasColumnType("uuid")
-                            .HasColumnName("user_id");
-
-                        b.Property<bool>("AllowJob")
-                            .HasColumnType("boolean")
-                            .HasColumnName("allow_job");
-
-                        b.Property<string>("AllowedMarkings")
-                            .IsRequired()
-                            .HasColumnType("text")
-                            .HasColumnName("allowed_markings");
-
-                        b.Property<int>("ExtraSlots")
-                            .HasColumnType("integer")
-                            .HasColumnName("extra_slots");
-
-                        b.Property<bool>("HavePriorityJoin")
-                            .HasColumnType("boolean")
-                            .HasColumnName("have_priority_join");
-
-                        b.Property<string>("OOCColor")
-                            .IsRequired()
-                            .HasColumnType("text")
-                            .HasColumnName("ooccolor");
-
-                        b.Property<int>("Tier")
-                            .HasColumnType("integer")
-                            .HasColumnName("tier");
-
-                        b.HasKey("UserId")
-                            .HasName("PK_sponsors");
-
-                        b.ToTable("sponsors", (string)null);
-                    });
                 });
 
             modelBuilder.Entity("Content.Server.Database.UploadedResourceLog", b =>
