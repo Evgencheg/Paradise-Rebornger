@@ -14,6 +14,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -43,6 +48,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -72,6 +82,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -101,6 +116,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -130,6 +150,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -159,6 +184,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
@@ -188,6 +218,11 @@
     - neck
     slot: mask
   - type: ContainerContainer
+    containers:
+    toggleable-clothing: !type:ContainerSlot
+      showEnts: False
+      occludes: True
+      ent: null
 
 - type: entity
   parent: ClothingMaskBase
