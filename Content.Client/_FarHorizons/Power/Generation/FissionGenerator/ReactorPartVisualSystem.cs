@@ -1,4 +1,10 @@
-﻿using Content.Shared._FarHorizons.Power.Generation.FissionGenerator;
+﻿// SPDX-FileCopyrightText: 2025 jhrushbe <capnmerry@gmail.com>
+// SPDX-FileCopyrightText: 2025 rottenheadphones <juaelwe@outlook.com>
+// SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+//
+// SPDX-License-Identifier: CC-BY-NC-SA-3.0
+
+using Content.Shared._FarHorizons.Power.Generation.FissionGenerator;
 using Robust.Client.GameObjects;
 
 namespace Content.Client._FarHorizons.Power.Generation.FissionGenerator;
